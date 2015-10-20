@@ -4,6 +4,7 @@ Node borrow check wrapper module for the DBC webservice https://borchk.addi.dk/2
 
 BORCHK is a web service used by systems and interfaces for lookup in library borrower records, to verify whether a user is enrolled, and whether he is a citizen of the municipality.
 
+
 ## Borchk.getBorrowerCheckResult(values):Promise
 Method for creating a borrow check request for a specific user.
 
