@@ -1,0 +1,49 @@
+{
+  "name": "dbc-node-borchk",
+  "version": "0.0.1",
+  "description": "Client for DBC webservice BorrCheck",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run cleardest && babel ./src -d dist",
+    "cleardest": "rm -rf ./dist",
+    "lint": "eslint ./src",
+    "lint:checkstyle": "eslint ./src  -o report.xml -f checkstyle",
+    "reinstall": "rm -r node_modules && npm install",
+    "test": "mocha --compilers js:babel/register src/__tests__",
+    "test:junit": "mocha --compilers js:babel/register src/__tests__ -R mocha-jenkins-reporter",
+    "watch": "npm run cleardest && babel ./src --watch -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inleadmedia/dbc-node-borchk.git"
+  },
+  "keywords": [
+    "dbc",
+    "inlead",
+    "borchk"
+  ],
+  "author": {
+    "name": "dbcdk"
+  },
+  "license": "GNU GPL v3",
+  "bugs": {
+    "url": "https://github.com/inleadmedia/dbc-node-borchk.git/issues"
+  },
+  "homepage": "https://github.com/inleadmedia/dbc-node-borchk.git#readme",
+  "devDependencies": {
+    "babel": "^5.8.20",
+    "babel-eslint": "^4.0.5",
+    "cache-manager": "^0.18.0",
+    "chai": "^3.2.0",
+    "eslint": "^1.0.0",
+    "mocha": "^2.2.5",
+    "mocha-jenkins-reporter": "^0.1.9"
+  },
+  "dependencies": {
+    "dbc-node-basesoap-client": "git+https://github.com/DBCDK/dbc-node-basesoap-client.git#stable_dist",
+    "dbc-node-openagency-client": "git+https://github.com/inleadmedia/dbc-node-openagency-client.git#FIL-31"
+  },
+  "gitHead": "",
+  "readme": "",
+  "readmeFilename": "README.md"
+}
