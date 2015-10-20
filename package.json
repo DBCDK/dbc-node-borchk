@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "dbc-node-basesoap-client": "git+https://github.com/DBCDK/dbc-node-basesoap-client.git#stable_dist",
-    "dbc-node-openagency-client": "git+https://github.com/inleadmedia/dbc-node-openagency-client.git#FIL-31"
+    "dbc-node-openagency-client": "git+https://github.com/inleadmedia/dbc-node-openagency-client.git#stable_dist"
   },
   "gitHead": "",
   "readme": "",
