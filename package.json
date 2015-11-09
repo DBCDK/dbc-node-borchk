@@ -1,6 +1,6 @@
 {
   "name": "dbc-node-borchk",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Client for DBC webservice BorrCheck",
   "main": "index.js",
   "scripts": {
