@@ -4,11 +4,12 @@ let babel = require('babel');
 module.exports = function() {
   return {
     files: [
-      {pattern: 'src/*.js'},
+      'src/*.js',
+      '!src/**/*.test.js'
     ],
 
     tests: [
-      {pattern: 'src/**/*.test.js'}
+      'src/**/*.test.js'
     ],
 
     preprocessors: {

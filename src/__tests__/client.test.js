@@ -23,8 +23,8 @@ describe('Test Borrow check request', () => {
     done();
 
     result.then(function(borrowCheck) { // eslint-disable-line
-      // console.log('borrowCheck ' , borrowCheck);
-      // assert.equal(borrowCheck.requestStatus, 'ok');
+       //console.log('borrowCheck ' , borrowCheck);
+       //assert.equal(borrowCheck.requestStatus, 'ok');
     });
   });
 });

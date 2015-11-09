@@ -1,8 +1,18 @@
 'use strict';
-import * as BaseSoapClient from 'dbc-node-basesoap-client';
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports.getBorrowerCheckResult = getBorrowerCheckResult;
+exports.init = init;
 
-let wsdl = null;
-let defaults = {};
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
+
+var _dbcNodeBasesoapClient = require('dbc-node-basesoap-client');
+
+var BaseSoapClient = _interopRequireWildcard(_dbcNodeBasesoapClient);
+
+var wsdl = null;
+var defaults = {};
 
 /**
  * Retrieves data from the webservice based on the parameters given
@@ -12,7 +22,7 @@ let defaults = {};
  */
 
 function sendBorrowerCheckRequest(params) {
-  let borrcheck = BaseSoapClient.client(wsdl, defaults, '');
+  var borrcheck = BaseSoapClient.client(wsdl, defaults, '');
   return borrcheck.request('borrowerCheck', params, null, true);
 }
 
@@ -22,8 +32,9 @@ function sendBorrowerCheckRequest(params) {
  * @return {Promise}
  * @param {{userId: string, userPincode: string, libraryCode: string}} values
  */
-export function getBorrowerCheckResult(values) {
-  const params = {
+
+function getBorrowerCheckResult(values) {
+  var params = {
     userId: values.userId,
     userPincode: values.userPincode,
     libraryCode: values.libraryCode
@@ -31,10 +42,11 @@ export function getBorrowerCheckResult(values) {
   return sendBorrowerCheckRequest(params);
 }
 
-export const METHODS = {
+var METHODS = {
   getBorrowerCheckResult: getBorrowerCheckResult
 };
 
+exports.METHODS = METHODS;
 /**
  * Setting the necessary paramerters for the client to be usable.
  * The wsdl is only set if wsdl is null to allow setting it through
@@ -45,7 +57,8 @@ export const METHODS = {
  *
  * @returns {{METHODS}}
  */
-export function init(config) {
+
+function init(config) {
   if (!wsdl) {
     wsdl = config.wsdl;
   }
