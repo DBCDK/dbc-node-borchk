@@ -59,9 +59,23 @@ exports.METHODS = METHODS;
  */
 
 function init(config) {
+
+  if (typeof config !== 'object') {
+    throw new Error('A config object should be provided');
+  }
+
+  if (!config.wsdl) {
+    throw new Error('A wsdl key should be provided with the given config object');
+  }
+
+  if (!config.serviceRequester) {
+    throw new Error('A serviceRequester key should be provided with the given config object');
+  }
+
   if (!wsdl) {
     wsdl = config.wsdl;
   }
+
   defaults = {
     serviceRequester: config.serviceRequester
   };
